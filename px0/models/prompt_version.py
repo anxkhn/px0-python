@@ -34,7 +34,7 @@ class PromptVersion(BaseModel):
     template: StrictStr = Field(description="The template syntax code with Go template parameters.")
     status: StrictStr = Field(description="Active lifecycle status of this template version.")
     created_at: datetime
-    published_at: datetime = Field(description="Timestamp when status was set to live. Null if draft.")
+    published_at: Optional[datetime] = Field(default=None, description="Timestamp when status was set to live. Null if draft.")
     tags: List[StrictStr] = Field(description="List of tag strings attached to this version.")
     __properties: ClassVar[List[str]] = ["id", "prompt_id", "version", "template", "status", "created_at", "published_at", "tags"]
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **template** | **str** | The template syntax code with Go template parameters. | 
 **status** | **str** | Active lifecycle status of this template version. | 
 **created_at** | **datetime** |  | 
-**published_at** | **datetime** | Timestamp when status was set to live. Null if draft. | 
+**published_at** | **datetime** | Timestamp when status was set to live. Null if draft. | [optional] 
 **tags** | **List[str]** | List of tag strings attached to this version. | 
 
 ## Example
